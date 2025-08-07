@@ -6,15 +6,15 @@ class Isopolicy < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/isovalent/isopolicy/raw/refs/heads/main/downloads/" + version + "/isopolicy_darwin_amd64.tar.gz"
-      sha256 "df1a98665057a1417f5fc7a335d2d586b10e75695a5f4632436054574e3a43aa"
+      url "https://github.com/isovalent/isopolicy/releases/download/" + version + "/isopolicy_darwin_amd64.tar.gz"
+      sha256 "2a37e19c9b37252c4c80c68dfe7ff5835998392b485789d4fa60a0314fd7450c"
       def install
         bin.install "isopolicy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/isovalent/isopolicy/raw/refs/heads/main/downloads/" + version + "/isopolicy_darwin_arm64.tar.gz"
-      sha256 "3a541b6b8eac43411888402f94e189db26387df24aad50540f90659b1bd8fbe0"
+      url "https://github.com/isovalent/isopolicy/releases/download/" + version + "/isopolicy_darwin_arm64.tar.gz"
+      sha256 "ee4da546c4203a5b731806093bc0fedcb353d1cbdef785ae1ed659c778e25aa9"
       def install
         bin.install "isopolicy"
       end
@@ -23,15 +23,15 @@ class Isopolicy < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/isovalent/isopolicy/raw/refs/heads/main/downloads/" + version + "/isopolicy_linux_amd64.tar.gz"
-      sha256 "3073eeac577e383ac855dcc778b6cae5c34e74116ca4fd58e5be8b921f38d35d"
+      url "https://github.com/isovalent/isopolicy/releases/download/" + version + "/isopolicy_linux_amd64.tar.gz"
+      sha256 "4f2cb0bcc3db36f76141e7daa223e8f544e851bca81cb435d1e0c857ed2fcd28"
       def install
         bin.install "isopolicy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isovalent/isopolicy/raw/refs/heads/main/downloads/" + version + "/isopolicy_linux_arm64.tar.gz"
-      sha256 "b525b97ad7d2033d94376dc26fea0c59da01bebb3482c240950afb98e3bbe860"
+      url "https://github.com/isovalent/isopolicy/releases/download/" + version + "/isopolicy_linux_arm64.tar.gz"
+      sha256 "0d0d965e811eebaa69b26679233142fe7d14289c93f6d7a08f4bd57513997041"
       def install
         bin.install "isopolicy"
       end
