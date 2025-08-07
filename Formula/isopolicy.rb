@@ -7,14 +7,14 @@ class Isopolicy < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/isovalent/isopolicy/releases/download/" + version + "/isopolicy_darwin_amd64.tar.gz"
-      sha256 "2a37e19c9b37252c4c80c68dfe7ff5835998392b485789d4fa60a0314fd7450c"
+      sha256 "b9caf6893b29feaa3a41918763f43a276da9888cf47ba3caca56e5368e21d84b"
       def install
         bin.install "isopolicy"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/isovalent/isopolicy/releases/download/" + version + "/isopolicy_darwin_arm64.tar.gz"
-      sha256 "ee4da546c4203a5b731806093bc0fedcb353d1cbdef785ae1ed659c778e25aa9"
+      sha256 "47591b98b256717b9fe16d3b7af45bbdeb371f1f0f6f757bfa2941665c636602"
       def install
         bin.install "isopolicy"
       end
@@ -24,14 +24,14 @@ class Isopolicy < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/isovalent/isopolicy/releases/download/" + version + "/isopolicy_linux_amd64.tar.gz"
-      sha256 "4f2cb0bcc3db36f76141e7daa223e8f544e851bca81cb435d1e0c857ed2fcd28"
+      sha256 "a6f23bfa7f072ce4f12cb1abc4949dc4be451cb9d8fbd09be48c823dca154692"
       def install
         bin.install "isopolicy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/isovalent/isopolicy/releases/download/" + version + "/isopolicy_linux_arm64.tar.gz"
-      sha256 "0d0d965e811eebaa69b26679233142fe7d14289c93f6d7a08f4bd57513997041"
+      sha256 "a2614989318285ce17223d65192e3cd4c9bd32bb2468d3af6618a4682b40e5c1"
       def install
         bin.install "isopolicy"
       end
