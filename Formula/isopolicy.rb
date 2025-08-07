@@ -2,7 +2,7 @@
 
 class Isopolicy < Formula
   desc "Isovalent Network Policy Recommendations"
-  version ""
+  version "v0.17.0"
 
   on_macos do
     if Hardware::CPU.intel?
