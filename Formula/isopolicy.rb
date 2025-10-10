@@ -1,20 +1,23 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright Isovalent, Inc
+
 # This file was generated. DO NOT EDIT.
 
 class Isopolicy < Formula
   desc "Isovalent Network Policy Recommendations"
-  version "v0.17.0"
+  version "v0.18.0"
 
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/isovalent/isopolicy/releases/download/" + version + "/isopolicy_darwin_amd64.tar.gz"
-      sha256 "78ae36095c395606513049dad4c92265453b8964b93f22c415a0c7d6486fde03"
+      sha256 "702ecd51a252a07a9f7215032a5a648cee0dd974305eb9e4f8c2030cab7210db"
       def install
         bin.install "isopolicy"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/isovalent/isopolicy/releases/download/" + version + "/isopolicy_darwin_arm64.tar.gz"
-      sha256 "7ee8958b14304a9e44fd6a047fb5aece8a3c524dc8289f5a0a6ac83a43497f4d"
+      sha256 "8ff377f211e9dc1968b64a48bd6c68a00ce84ea6c62792210eed37bfc2cc6c82"
       def install
         bin.install "isopolicy"
       end
@@ -24,14 +27,14 @@ class Isopolicy < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/isovalent/isopolicy/releases/download/" + version + "/isopolicy_linux_amd64.tar.gz"
-      sha256 "aaac1541a55cbc0a9e0cfb5999d6aee58d2486a1bbb26737c81dd60f88466c24"
+      sha256 "b2cddce2aeb4bb515a28be5eba5fa605d44fdbe8f474c245454b6a819c3b8a07"
       def install
         bin.install "isopolicy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/isovalent/isopolicy/releases/download/" + version + "/isopolicy_linux_arm64.tar.gz"
-      sha256 "8f30db85ea54695756151192d1b6b54c31409e5847e1063e4bc5f29a3f94d4e4"
+      sha256 "3cd1521e8e5bd75c6a58d0b00d989dd529193f04a776abc0513259902b3df0fb"
       def install
         bin.install "isopolicy"
       end
